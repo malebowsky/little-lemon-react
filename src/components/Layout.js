@@ -2,8 +2,9 @@
 const Layout = ({ children }) => {
     return (
         <div style={{
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplateRows: "auto 1fr auto",
+            gap: "2rem",
             overflow: "hidden",
             minHeight: "100vh",
             height: "100%",

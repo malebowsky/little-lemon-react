@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap');
 
+:root {
+  --primary-color: #495E57;
+  --secondary-color: #F4CE14;
+  --highlight-light-color: #EDEFEE;
+  --highlight-dark-color: #333333;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,20 +27,50 @@ code {
     monospace;
 }
 
-.nav {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Markazi Text', serif;
+  color: var(--primary-color);
 }
 
-.nav li {
-  margin-left: 2rem;
+.nav,
+.footer {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nav li,
+.footer li {
+  margin-left: 1rem;
   text-decoration: none;
   list-style: none;
 }
 
-.nav li a {
+.nav li a,
+.footer li a {
   text-decoration: none;
   color: #000;
   font-family: 'Markazi Text', serif;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav li {
+    margin-left: 2rem;
+  }
 }

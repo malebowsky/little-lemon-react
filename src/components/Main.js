@@ -1,6 +1,6 @@
 const Main = () => {
 
-    return null;
+    return <div>xxx</div>;
 }
 
 export default Main;
