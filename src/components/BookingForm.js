@@ -25,7 +25,7 @@ const BookingForm = ({
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time" onChange={(e) => setFormValue({ ...formValue, time: e.target.value })}>
                     <option value="">Choose an option</option>
-                    {availiableTimes().map((time, index) => (
+                    {availiableTimes && availiableTimes().map((time, index) => (
                         <option key={index}>{time}</option>
                     ))}
                 </select>
