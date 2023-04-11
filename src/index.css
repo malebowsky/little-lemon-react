@@ -194,6 +194,33 @@ a {
   color: var(--highlight-dark-color);
 }
 
+label {
+  color: var(--highlight-dark-color);
+  font-family: 'Karla', sans-serif;
+}
+
+input, select {
+  border: 1px solid var(--highlight-dark-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+form {
+  min-width: 300px;
+}
+
+form button {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  color: var(--highlight-dark-color);
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .nav {
     justify-content: space-between;
