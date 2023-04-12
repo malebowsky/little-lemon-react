@@ -5,27 +5,26 @@ const BookingForm = ({
     setFormValue,
     availiableTimes,
     setAvailiableTimes,
+    submitForm
 }) => {
+    
     useEffect(() => {
         console.log(formValue);
     }, [formValue]);
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        console.log(formValue);
-    }
-
-    console.log(availiableTimes)
-
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-            <form style={{ display: 'grid', maxWidth: '200px', gap: '16px' }} onSubmit={onSubmit}>
+            <form style={{ display: 'grid', maxWidth: '200px', gap: '16px' }} onSubmit={submitForm}>
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" name="res-date" onChange={(e) => setFormValue({ ...formValue, date: e.target.value })} />
+                <input type="date" id="res-date" name="res-date" onChange={(e) => {
+                    setFormValue({ ...formValue, date: e.target.value });
+                    console.log(e.target.value)
+                    setAvailiableTimes(e.target.value);
+                }} />
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time" onChange={(e) => setFormValue({ ...formValue, time: e.target.value })}>
                     <option value="">Choose an option</option>
-                    {availiableTimes && availiableTimes().map((time, index) => (
+                    {!!availiableTimes && availiableTimes.map((time, index) => (
                         <option key={index}>{time}</option>
                     ))}
                 </select>

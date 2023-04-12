@@ -8,7 +8,6 @@ test('Renders BookingForm label', () => {
     expect(label).toBeInTheDocument()
 })
 
-
 test('Can submit form', () => {
     render(<BookingForm />)
     const button = screen.getByText(/Make your reservation/i)
@@ -28,11 +27,6 @@ test('InitializeTimes to contain', () => {
 })
 
 test('UpdateTimes returns an array', () => {
-    const times = updateTimes(initializeTimes());
+    const times = updateTimes(null, '01-01-2023');
     expect(times).toEqual(expect.any(Array))
-})
-
-test('UpdateTimes to contain', () => {
-    const times = updateTimes(initializeTimes());
-    expect(times).toContain("17:00")
 })

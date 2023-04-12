@@ -5,6 +5,7 @@ function Booking({
   setFormValue,
   availiableTimes,
   setAvailiableTimes,
+  submitForm
 }) {
   return (
     <>
@@ -13,6 +14,7 @@ function Booking({
         setFormValue={setFormValue}
         availiableTimes={availiableTimes}
         setAvailiableTimes={setAvailiableTimes}
+        submitForm={submitForm}
       />
     </>
   );
